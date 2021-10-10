@@ -5,11 +5,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
 }
 
 
 header {
+    font-family: 'Lato', sans-serif;
     display: flex;
     background-color: #E0E0E0;
     align-items: center;
@@ -75,6 +75,7 @@ nav a {
 }
 
 .transaction h1 {
+    font-family: 'Lato', sans-serif;
     text-align: center;
     font-style: normal;
     font-weight: bold;
@@ -101,7 +102,7 @@ nav a {
     border-radius: 4px;
     padding-left: 10px;
 
-    font-family: Inter;
+    font-family:  'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -128,7 +129,7 @@ nav a {
     border-radius: 4px;
     padding-left: 12px;
 
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -156,7 +157,7 @@ nav a {
     border-radius: 4px;
     padding-left: 12px;
 
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -187,7 +188,7 @@ nav a {
     color: #FFFFFF;
     margin-bottom: 20px;
 
-    font-family: Inter;
+    font-family:  'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
