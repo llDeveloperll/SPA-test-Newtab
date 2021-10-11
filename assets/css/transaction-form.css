@@ -13,7 +13,7 @@
     width: 400px;
     height: 344px;
 
-    border: 1px solid #141111;
+    border: 1px solid #979797;
     box-sizing: border-box;
     border-radius: 4px;
 
@@ -137,7 +137,7 @@
     height: 32px;
     background: #333333;
     box-shadow: 0 0 0 0;
-    border: 0 none;
+    border: 0 none ;
     border-radius: 4px;
     color: #FFFFFF;
     margin-bottom: 20px;

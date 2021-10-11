@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>SPA-Test</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/form-section.css">
+    <link rel="stylesheet" href="./assets/css/transaction-form.css">
+    <link rel="stylesheet" href="./assets/css/account-statement.css">
 </head>
+
 <body>
     <header>
         <span class="logo">
@@ -21,8 +25,8 @@
                 31.3043 32.8246ZM15.6522 10.8947C15.6522 15.2549 12.1483 18.7895 
                 7.82609 18.7895C3.50386 18.7895 0 15.2549 0 10.8947C0 6.53459 
                 3.50386 3 7.82609 3C12.1483 3 15.6522 6.53459 15.6522 10.8947ZM0 
-                24.0526H15.6522V39.8421H0V24.0526ZM31.3043 3L40 18.7895H22.6087L31.3043 3Z" 
-                stroke="#333333" stroke-width="2" stroke-linecap="square"/>
+                24.0526H15.6522V39.8421H0V24.0526ZM31.3043 3L40 18.7895H22.6087L31.3043 3Z" stroke="#333333"
+                    stroke-width="2" stroke-linecap="square" />
             </svg>
             <label>Controle financeiro</label>
         </span>
@@ -34,38 +38,44 @@
         </nav>
 
     </header>
+    <section class="form-section">
 
-    <section class="transaction">
-        <h1>Nova transação</h1>
-        <form action="">
-            <div class="transaction-type">
-                <label>Tipo de transação</label>
-                <select name="type" id="type">
-                    <option value="" disabled="" hidden="">Selecione uma opção</option>
-                    <option value="buy">Compra</option>
-                    <option value="sell">Venda</option>
-                </select>
-            </div>
-            <div class="merchandise-name">
-                <label>Nome da mercadoria</label>
-                <input type="text" value="input"/>
-            </div>            
-            <div class="merchandise-value">
-                <label>Valor</label>
-                <input type="text" value="R$ 0,00"/>
-            </div>            
-            <div class="add-transaction">
-                <input type="button" value="Adicionar transação">
-            </div>
-        </form>
-    </section >
+        <section class="transaction">
+            <h1>Nova transação</h1>
+            <form action="">
+                <div class="transaction-type">
+                    <label>Tipo de transação</label>
+                    <select name="type" id="type">
+                        <option value="" disabled="" hidden="">Selecione uma opção</option>
+                        <option value="buy">Compra</option>
+                        <option value="sell">Venda</option>
+                    </select>
+                </div>
+                <div class="merchandise-name">
+                    <label>Nome da mercadoria</label>
+                    <input type="text" value="input" />
+                </div>
+                <div class="merchandise-value">
+                    <label>Valor</label>
+                    <input type="text" value="R$ 0,00" />
+                </div>
+                <div class="add-transaction">
+                    <input type="button" value="Adicionar transação">
+                </div>
+            </form>
+        </section>
 
-    <section class="account">
+        <section class="account">
+            <h1>Extrato de transações</h1>
+
+        </section>
+
 
     </section>
 
     <footer>
-        
+
     </footer>
 </body>
+
 </html>
