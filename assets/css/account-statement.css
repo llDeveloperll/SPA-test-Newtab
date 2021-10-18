@@ -22,3 +22,54 @@
     line-height: 22px;
     margin: 20px 0;
 }
+
+
+.account .list-statement {
+    margin-top: 15px;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    border-top: 0 solid transparent;
+    margin-top: 1rem;
+}
+
+
+.account .list-statement thead {
+    position: relative;
+    left: 20px;
+    
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.account .list-statement tbody {
+    position: relative;
+    left: 20px;
+
+    margin-bottom: 1rem;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.account .list-statement .transfer-symbol {
+    text-align: start;
+    padding-bottom: 6px;
+}
+
+.account .list-statement .transfer-name {
+    text-align: start;
+    padding-bottom: 6px;
+}
+
+.account .list-statement .transfer-value {
+    text-align: end;
+    position: relative;
+    right: 40px;
+    padding-bottom: 6px;
+}
