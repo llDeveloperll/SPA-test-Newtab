@@ -1,5 +1,5 @@
 
-.account {
+.account-statement {
     display: flex;
     flex-direction: column;
     
@@ -13,7 +13,7 @@
 }
 
 
-.account h1 {
+.account-statement h1 {
     font-family: 'Lato', sans-serif;
     text-align: center;
     font-style: normal;
@@ -24,7 +24,7 @@
 }
 
 
-.account .list-statement {
+.account-statement .list-statement {
     margin-top: 15px;
     border-collapse: separate;
     border-spacing: 0 5px;
@@ -33,7 +33,7 @@
 }
 
 
-.account .list-statement thead {
+.account-statement .list-statement thead {
     position: relative;
     left: 20px;
     
@@ -44,10 +44,9 @@
     line-height: 22px;
 }
 
-.account .list-statement tbody {
+.account-statement .list-statement tbody {
     position: relative;
     left: 20px;
-
     margin-bottom: 1rem;
 
     font-family: 'Lato', sans-serif;
@@ -57,19 +56,68 @@
     line-height: 16px;
 }
 
-.account .list-statement .transfer-symbol {
+.account-statement .list-statement .transfer-symbol {
     text-align: start;
     padding-bottom: 6px;
 }
 
-.account .list-statement .transfer-name {
+.account-statement .list-statement .transfer-name {
     text-align: start;
     padding-bottom: 6px;
 }
 
-.account .list-statement .transfer-value {
+.account-statement .list-statement .transfer-value {
     text-align: end;
     position: relative;
     right: 40px;
     padding-bottom: 6px;
+}
+
+
+
+.account-statement .statement-result {
+    border-top: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 94%;
+    margin-left: 3%;
+}
+
+
+
+.account-statement .statement-result .total { 
+    position: relative;
+    left: 3%;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.account-statement .statement-result .value {
+    position: relative;
+    left: 82.5%;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.account-statement .statement-result .state {
+    position: relative;
+    left: 76.5%;
+    top: 70%;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 22px;
 }
