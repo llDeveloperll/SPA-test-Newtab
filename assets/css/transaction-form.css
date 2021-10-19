@@ -8,7 +8,6 @@
 
     background: #FFFFFF;
     margin-top: 30px;
-    margin-left: 200px;    
 
     width: 400px;
     height: 344px;
@@ -147,11 +146,4 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
-}
-
-
-@media screen and (max-width: 1112px) {
-    .transaction {
-        margin-left: 20px;
-    }
 }

@@ -18,17 +18,22 @@
 
 header {
     font-family: 'Lato', sans-serif;
-    display: flex;
     background-color: #E0E0E0;
-    align-items: center;
     height: 80px;
-    padding: 0 200px;
+}
+
+.header-div {
+    display: flex;
+    max-width: 1110px;
+    margin-left: calc(50% - (1110px/2));
     justify-content: space-between;
-    justify-self: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
 .logo {
     display: flex;
+    align-content: space-between;
 }
 
 .logo label {
@@ -60,7 +65,8 @@ nav a {
 
 
 @media screen and (max-width: 1112px) {
-    header {
-        padding: 0 20px;
+    .header-div {
+        margin-left: 0;
+        padding-left: 2%;
     }
 }
