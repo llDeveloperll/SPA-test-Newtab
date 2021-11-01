@@ -63,10 +63,52 @@ nav a {
     line-height: 19px;
 }
 
+.header-div i {
+    display: none;
+}
+
 
 @media screen and (max-width: 1112px) {
     .header-div {
         margin-left: 0;
         padding-left: 2%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        height: 60px;
+    }
+
+    .header-div {
+        display: block;
+        max-width: 768px;
+        padding: 10px;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .logo label {
+        margin-left: 30%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header-div i.fa {
+        float: right;
+        display: block;
+
+        width: 24px;
+        height: 24px;
+
+        position: absolute;
+        right: 0;
+        top: 22px;
     }
 }
