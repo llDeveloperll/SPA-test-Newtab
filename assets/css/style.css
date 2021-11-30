@@ -1,0 +1,648 @@
+/* font-family: 'Lato', sans-serif; */
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* oculta scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox*/
+html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
+}
+
+
+/* estilização {tag header} */
+header {
+    background: #E0E0E0; /* aplica cor no background dd header */
+}
+
+/* aplicação de props {classe headerContent} */
+header > .headerContent {
+    display: flex; /* demarca que o display será type flex */
+    align-items: center; /* centraliza os items verticalmente */
+
+    height: 80px; /* demarca altura do header (especificado no figma) */
+    margin-left: calc(50% - (1110px/2)); /* calculo executado para manter a margem proporcional ao tamanho de tela */
+
+    max-width: 1110px; /* demarca a largura maxima do conteudo */
+
+}
+
+/* estilização {H2 - headerContent} */
+header > .headerContent > .logoTitle > h2 {
+    margin-left: 20px; /* aplica uma margem de 20px a esquerda, separando do logo (svg) */
+
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+}
+
+header > .headerContent > nav {
+    margin-left: auto; /* quando aplicado essa prop, o conteudo nav fica a extremidade da direita */
+}
+
+/* estilização {classe navContent} */
+header > .headerContent > nav > .navContent  {
+    background-color: #FFFFFF;
+    
+    width: 350px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* estilização {a - navBar} */
+header > .headerContent > nav > .navContent > a {
+    text-decoration: none;
+    color: #333333;
+
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/* aplicação de prop {i - navBarIcon} */
+header > .headerContent > nav > .navBarIcon {
+    display: none; /* aplicando essa prop, faz com que o icone de barras fique invisivel */
+}
+
+
+
+/* estilização do content > form */
+
+.content {
+    display: flex; /* demarca que o display será type flex */
+    margin-left: calc(50% - (1110px/2));
+    margin-top: 30px;
+
+    max-width: 1110px; /* demarca a largura maxima do conteudo */
+
+}
+
+.content > .form {
+    width: 400px;
+    height: 344px;
+
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+    
+}
+
+
+/* content title */
+.content > .form > .title {
+    text-align: center;
+    color: #000000;
+}
+
+.content > .form > .title > h1 {
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* content transaction type */
+
+.content > .form > .inputers > .transaction_type {
+    display: grid;
+    width: 370px;
+
+    margin: 20px auto 0;
+    
+}
+
+
+.content > .form > .inputers > .transaction_type > label {
+
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+
+.content > .form > .inputers > .transaction_type > select {
+
+    padding-left: 10px;
+    height: 32px;
+
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    
+    color: #888888;
+
+    outline: none;
+
+}
+
+
+/* content merchandise name */
+
+.content > .form > .inputers > .merch_name {
+    display: grid;
+    width: 370px;
+
+    margin: 21px auto 0;
+
+}
+
+.content > .form > .inputers > .merch_name > label {
+
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.content > .form > .inputers > .merch_name > input {
+    height: 32px;
+    padding-left: 10px;
+
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+    
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: #888888;
+}
+
+
+/* content merchandise value */
+
+.content > .form > .inputers > .merch_value {
+    display: grid;
+    width: 370px;
+
+    margin: 21px auto 0;
+}
+
+
+.content > .form > .inputers > .merch_value > label {
+
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+
+.content > .form > .inputers > .merch_value > input {
+    height: 32px;
+    padding-left: 10px;
+
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+        
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: #888888;
+}
+
+
+/* content input button {submit_button} */
+.content > .form > .submit_button {
+    display: grid;
+    width: 370px;
+    height: 32px;
+
+    margin: 20px auto 0;
+
+    background: #333333;
+    border-radius: 4px;
+
+    text-align: center;
+    align-content: center;
+    
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+
+    /* @btn-primary-color */
+    color: #FFFFFF;
+
+    border: none;
+    outline: none;
+
+}
+
+
+/* estilização do content > extract */
+
+.content > .extract {
+    width: 680px;
+    height: 281px;
+
+    margin-left: auto;
+
+    background: #FFFFFF;
+    /*border: 1px solid #979797;*/
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.content > .extract > .title {
+    text-align: center;
+    color: #000000;
+}
+
+.content > .extract > .title > h1 {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* list */
+
+.content > .extract > section > .list {
+    border-collapse: collapse;
+
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-bottom: 1px solid black;
+
+}
+
+
+/* list thead */
+
+.content > .extract > section > .list > thead {
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+
+}
+
+.content > .extract > section > .list > thead > tr > th {
+    border-bottom: 1px solid #979797;
+}
+
+.content > .extract > section > .list > thead > tr > th:nth-child(2) {
+    text-align: start;
+    width: 35%;
+}
+
+.content > .extract > section > .list > thead > tr > th:nth-child(3) {
+    text-align: end;
+}
+
+/* list tbody */
+
+.content > .extract > section > .list > tbody { 
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+
+}
+
+
+.content > .extract > section > .list > tbody > tr > td {
+    border-bottom: 1px solid #979797;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content > .extract > section > .list > tbody > tr > td:nth-child(1) {
+    text-align: center;
+}
+
+.content > .extract > section > .list > tbody > tr > td:nth-child(3) {
+    text-align: end;
+}
+
+/* results */
+
+.content > .extract > .results {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-rows: 35px 5px;
+    align-items: center;
+
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    border-top: 1px solid #979797;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
+
+.content > .extract > .results > .total {
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+
+}
+
+.content > .extract > .results > .value {
+    text-align: end;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+
+}
+
+.content > .extract > .results > .profits {
+    text-align: end;
+    grid-column-start: 2;
+
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 22px;
+
+}
+
+@media screen and (max-width: 1112px) {
+    header > .headerContent {
+        margin: 0 calc(52% - (1110px/2));
+    }
+
+    .content {
+        margin-left: calc(52% - (1110px/2));
+    }
+
+    .content > .extract  {
+        width: 652px;
+        margin-right: auto;
+    }
+}
+
+
+@media screen and (max-width: 1076px) {
+    header > .headerContent {
+        margin: 0 calc(54% - (1110px/2));
+    }
+
+    
+    .content {
+        margin-left: calc(54% - (1110px/2));
+    }
+
+    .content > .extract  {
+        width: 622px;
+        margin-right: auto;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    header > .headerContent {
+        margin: 0 calc(56% - (1112px/2));
+    }
+        
+    .content {
+        margin-left: calc(56% - (1110px/2));
+    }
+
+    .content > .extract  {
+        width: 582px;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    header > .headerContent {
+        margin: 0 20px;
+    }
+
+    .content {
+        margin:30px 20px;
+    }
+
+    .content > .extract  {
+        width: 582px;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header > .headerContent > .logoTitle > h2 {
+        margin-left: 0; /* remove margin de 20 px aplicado pra desktop */
+    }
+
+    header > .headerContent  > .logoTitle  {
+        margin-left: auto; /* deixa o texto centralizado */
+    }
+
+    header > .headerContent > nav > .navContent {
+        display: none; /* oculta os elementos de nav */
+    }
+
+    header > .headerContent > nav > .navBarIcon {
+        display: inline-flex; /* mostra o elemento de barras para click */
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content > .form {
+        width: 728px;
+        height: 189px;
+    }
+
+    .content > .form > .inputers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .content > .form > .inputers > .transaction_type {
+        width: 150px;
+        margin: 0 0 0;
+    }
+    
+    .content > .form > .inputers > .merch_name {
+        width: 348px;
+        margin: 0 0 0;
+    }
+    
+    .content > .form > .inputers > .merch_value {
+        width: 150px;
+        margin: 0 0 0;
+    }
+
+    .content > .form > .submit_button {
+
+        width: 200px;   
+
+        float: right;
+        margin: 20px 5px 0;
+    }
+    
+    .content > .extract {
+        width: 728px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 744px) {
+
+    .content > .form {
+        margin-left: auto;
+        margin-right: auto;
+
+        border: none;
+        border-radius: 0;
+
+        border-bottom: 1px solid #979797;
+
+        width: 371px;
+        height: 290px;
+    }
+
+    
+    .content > .form > .inputers {
+        display: block;
+    }
+
+    .content > .form > .title {
+        display: none;
+    }
+
+    .content > .form > .inputers > .transaction_type {
+        width: 371px;
+        margin-left: auto;
+    }
+    
+    .content > .form > .inputers > .merch_name {
+        width: 371px;
+        margin-left: auto;
+    }
+    
+    .content > .form > .inputers > .merch_value {
+        width: 371px;
+        margin-left: auto;
+    }
+
+    .content > .form > .submit_button {
+
+        width: 371px;   
+
+        float: none;
+        margin: 20px auto 0;
+    }
+
+    .content > .extract {
+        width: 371px;
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .content > .form {
+        width: 280px;
+        height: 300px;
+    }
+
+    .content > .form > .inputers > .transaction_type {
+        width: 280px;
+        margin: 20px auto;
+    }
+    
+    .content > .form > .inputers > .merch_name {
+        width: 280px;
+        margin: 20px auto;
+    }
+    
+    .content > .form > .inputers > .merch_value {
+        width: 280px;
+        margin: 20px auto;
+    }
+
+    .content > .form > .submit_button {
+        width: 280px;   
+        margin: 20px auto;
+    }
+
+    .content > .extract {
+        width: 280px;
+        margin-top: 20px;
+    }
+
+}
+
+
+/* estilização e aplicação de props {footer} */
+footer {
+    display: block;
+    width: 100vw;
+    height: 8px;
+    position: fixed;
+    bottom: 0;
+    background-color: #333333;
+}
