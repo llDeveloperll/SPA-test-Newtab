@@ -303,16 +303,19 @@ header > .headerContent > nav > .navBarIcon {
 }
 
 .content > .extract > .title > h1 {
+
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
+
 }
 
 /* list */
 
 .content > .extract > section > .list {
+
     border-collapse: collapse;
 
     width: 96%;
@@ -499,8 +502,19 @@ header > .headerContent > nav > .navBarIcon {
         display: none; /* oculta os elementos de nav */
     }
 
-    header > .headerContent > nav > .navBarIcon {
+    header > .headerContent > nav > .navBarIcon  {
         display: inline-flex; /* mostra o elemento de barras para click */
+    }
+
+    header > .headerContent > nav > .navBarIcon:hover  {
+        display: inline-flex;
+        color: #333333;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 260px;
+        background-color: #333333;
     }
 
     .content {
