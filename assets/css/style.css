@@ -4,6 +4,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 /* oculta scrollbar */
@@ -16,12 +17,21 @@ html, body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     overflow-x: hidden;
+
 }
 
+*{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
 
 /* estilização {tag header} */
 header {
     background: #E0E0E0; /* aplica cor no background dd header */
+
+    display: flex;
+    justify-content: center;
+
 }
 
 /* aplicação de props {classe headerContent} */
@@ -30,9 +40,10 @@ header > .headerContent {
     align-items: center; /* centraliza os items verticalmente */
 
     height: 80px; /* demarca altura do header (especificado no figma) */
-    margin-left: calc(50% - (1110px/2)); /* calculo executado para manter a margem proporcional ao tamanho de tela */
+    /* margin-left: calc(50% - (1110px/2)); */ /* calculo executado para manter a margem proporcional ao tamanho de tela */
 
     max-width: 1110px; /* demarca a largura maxima do conteudo */
+    width: 100%;
 
 }
 
@@ -40,59 +51,51 @@ header > .headerContent {
 header > .headerContent > .logoTitle > h2 {
     margin-left: 20px; /* aplica uma margem de 20px a esquerda, separando do logo (svg) */
 
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
 
 }
 
-header > .headerContent > nav {
+.headerContent nav {
     margin-left: auto; /* quando aplicado essa prop, o conteudo nav fica a extremidade da direita */
+    background-color: #FFFFFF;
 }
 
 /* estilização {classe navContent} */
-header > .headerContent > nav > .navContent  {
-    background-color: #FFFFFF;
-    
-    width: 350px;
-    height: 40px;
+.navContent  {
 
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
+
+    width: 350px;
+    height: 40px;
+
 }
 
 
 /* estilização {a - navBar} */
-header > .headerContent > nav > .navContent > a {
+a {
     text-decoration: none;
     color: #333333;
 
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
 }
 
 /* aplicação de prop {i - navBarIcon} */
-header > .headerContent > nav > .navBarIcon {
+#check, .navBarIcon, .navBarClose, .navBarBackground {
     display: none; /* aplicando essa prop, faz com que o icone de barras fique invisivel */
 }
-
-
 
 /* estilização do content > form */
 
 .content {
     display: flex; /* demarca que o display será type flex */
-    margin-left: calc(50% - (1110px/2));
     margin-top: 30px;
-
-    max-width: 1110px; /* demarca a largura maxima do conteudo */
-
+    justify-content: center;
 }
 
 .content > .form {
@@ -114,8 +117,7 @@ header > .headerContent > nav > .navBarIcon {
 }
 
 .content > .form > .title > h1 {
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
+
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -134,8 +136,6 @@ header > .headerContent > nav > .navBarIcon {
 
 .content > .form > .inputers > .transaction_type > label {
 
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
@@ -156,8 +156,6 @@ header > .headerContent > nav > .navBarIcon {
     box-sizing: border-box;
     border-radius: 4px;
 
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
@@ -181,8 +179,6 @@ header > .headerContent > nav > .navBarIcon {
 
 .content > .form > .inputers > .merch_name > label {
 
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
@@ -201,8 +197,6 @@ header > .headerContent > nav > .navBarIcon {
     box-sizing: border-box;
     border-radius: 4px;
     
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
@@ -223,8 +217,6 @@ header > .headerContent > nav > .navBarIcon {
 
 .content > .form > .inputers > .merch_value > label {
 
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
@@ -244,8 +236,6 @@ header > .headerContent > nav > .navBarIcon {
     box-sizing: border-box;
     border-radius: 4px;
         
-    font-family: 'Lato', sans-serif; 
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
@@ -269,7 +259,6 @@ header > .headerContent > nav > .navBarIcon {
     align-content: center;
     
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
@@ -289,8 +278,6 @@ header > .headerContent > nav > .navBarIcon {
     width: 680px;
     height: 281px;
 
-    margin-left: auto;
-
     background: #FFFFFF;
     /*border: 1px solid #979797;*/
     box-sizing: border-box;
@@ -304,8 +291,6 @@ header > .headerContent > nav > .navBarIcon {
 
 .content > .extract > .title > h1 {
 
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -331,8 +316,6 @@ header > .headerContent > nav > .navBarIcon {
 
 .content > .extract > section > .list > thead {
 
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 22px;
@@ -356,8 +339,6 @@ header > .headerContent > nav > .navBarIcon {
 
 .content > .extract > section > .list > tbody { 
 
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
 
@@ -394,8 +375,6 @@ header > .headerContent > nav > .navBarIcon {
     margin-top: 5px;
     border-top: 1px solid #979797;
 
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
 }
 
 .content > .extract > .results > .total {
@@ -426,50 +405,47 @@ header > .headerContent > nav > .navBarIcon {
 }
 
 @media screen and (max-width: 1112px) {
-    header > .headerContent {
+    /*header > .headerContent {
         margin: 0 calc(52% - (1110px/2));
     }
 
     .content {
         margin-left: calc(52% - (1110px/2));
-    }
+    }*/
 
     .content > .extract  {
         width: 652px;
-        margin-right: auto;
     }
 }
 
 
 @media screen and (max-width: 1076px) {
-    header > .headerContent {
+    /*header > .headerContent {
         margin: 0 calc(54% - (1110px/2));
     }
 
     
     .content {
         margin-left: calc(54% - (1110px/2));
-    }
+    }*/
 
     .content > .extract  {
         width: 622px;
-        margin-right: auto;
     }
 }
 
 
 @media screen and (max-width: 1024px) {
-    header > .headerContent {
+    /*header > .headerContent {
         margin: 0 calc(56% - (1112px/2));
     }
         
     .content {
         margin-left: calc(56% - (1110px/2));
-    }
+    }*/
 
     .content > .extract  {
         width: 582px;
-        margin-right: auto;
     }
 }
 
@@ -484,7 +460,6 @@ header > .headerContent > nav > .navBarIcon {
 
     .content > .extract  {
         width: 582px;
-        margin-right: auto;
     }
 }
 
@@ -498,23 +473,67 @@ header > .headerContent > nav > .navBarIcon {
         margin-left: auto; /* deixa o texto centralizado */
     }
 
-    header > .headerContent > nav > .navContent {
-        display: none; /* oculta os elementos de nav */
+    .headerContent nav {
+        background-color: transparent;
+        width: 0;
     }
 
-    header > .headerContent > nav > .navBarIcon  {
-        display: inline-flex; /* mostra o elemento de barras para click */
+    .navContent {
+        display: none;
     }
-
-    header > .headerContent > nav > .navBarIcon:hover  {
+    
+    .navContent span, .navBarBackground {
+        display: none;
+    }
+    
+    .navBarIcon {
         display: inline-flex;
-        color: #333333;
+    }
+
+    #check:checked ~ .navBarClose {
+        display: inline-flex;
+        position: absolute;
+        color: white;
+        top: 15px;
+        right: 225px;
+        font-size: 18px;
+    }
+    
+    #check:checked ~ .navBarBackground {
+        color: transparent;
+        display: block;
         position: fixed;
         top: 0;
         right: 0;
         height: 100vh;
-        width: 260px;
+        width: 252px;
         background-color: #333333;
+    }
+
+    #check:checked ~ .navContent, .navContent a {
+        display: grid;
+        color: white;
+        position: relative;
+        right: 130px;
+        top: 20px;
+        margin-top: 6px;
+        width: 280px;
+        height: 32px;
+        justify-content: end;
+        align-content: center;
+    }
+
+    #check:checked ~ .navContent a {
+        padding-right: 8px;
+    }
+
+    .navContent a:hover {
+        background-color: #C4C4C4;
+        width: 244px;
+        height: 32px;
+        align-content: center;
+        place-self: flex-end;
+        color: #333333;
     }
 
     .content {
@@ -562,7 +581,16 @@ header > .headerContent > nav > .navBarIcon {
     }
 }
 
-@media screen and (max-width: 744px) {
+
+@media screen and (max-width: 411px) {
+
+    #check:checked ~ .navBarBackground {
+        width: 351px;
+    }
+
+    #check:checked ~ .navBarClose {
+        right: 324px;
+    }
 
     .content > .form {
         margin-left: auto;
@@ -615,41 +643,6 @@ header > .headerContent > nav > .navBarIcon {
     }
 
 }
-
-@media screen and (max-width: 400px) {
-
-    .content > .form {
-        width: 280px;
-        height: 300px;
-    }
-
-    .content > .form > .inputers > .transaction_type {
-        width: 280px;
-        margin: 20px auto;
-    }
-    
-    .content > .form > .inputers > .merch_name {
-        width: 280px;
-        margin: 20px auto;
-    }
-    
-    .content > .form > .inputers > .merch_value {
-        width: 280px;
-        margin: 20px auto;
-    }
-
-    .content > .form > .submit_button {
-        width: 280px;   
-        margin: 20px auto;
-    }
-
-    .content > .extract {
-        width: 280px;
-        margin-top: 20px;
-    }
-
-}
-
 
 /* estilização e aplicação de props {footer} */
 footer {

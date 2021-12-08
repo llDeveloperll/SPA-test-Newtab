@@ -8,12 +8,13 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Single Page Application</title>
@@ -27,7 +28,7 @@
 
             <!-- LOGO -->
             <div class="logoIcon">
-                <svg width="42" height="41" viewBox="-3.5 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="30" height="27," viewBox="-3.5 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M31.3043 32.8246C33.7056 32.8246 35.6522 30.8609 35.6522 28.4386C35.6522 26.0163 33.7056 24.0526 31.3043 24.0526C28.9031 24.0526 26.9565 26.0163 26.9565 28.4386C26.9565 30.8609 28.9031 32.8246 31.3043 32.8246ZM31.3043 32.8246C27.4624 32.8246 24.3478 35.9664 24.3478 39.8421H38.2609C38.2609 35.9664 35.1463 32.8246 31.3043 32.8246ZM15.6522 10.8947C15.6522 15.2549 12.1483 18.7895 7.82609 18.7895C3.50386 18.7895 0 15.2549 0 10.8947C0 6.53459 3.50386 3 7.82609 3C12.1483 3 15.6522 6.53459 15.6522 10.8947ZM0 24.0526H15.6522V39.8421H0V24.0526ZM31.3043 3L40 18.7895H22.6087L31.3043 3Z"
                         stroke="#333333" stroke-width="2" stroke-linecap="square" />
@@ -39,9 +40,14 @@
                 <h2>Controle financeiro</h2>
             </div>
 
-
-
             <nav>
+
+                <input type="checkbox" id="check">
+                    <div class="navBarBackground"></div>
+                </input>    
+
+                <label class="navBarIcon" for="check"><i class="fa fa-bars"></i></label>
+                <label class="navBarClose" for="check"><span>x</span></label>
 
                 <div class="navContent">
                     <a href="">Cadastro de transações</a>
@@ -51,12 +57,7 @@
                     <a href="">Limpar dados</a>
                 </div>
 
-                <div class="navBarIcon">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-
             </nav>
-
 
         </div>
 
@@ -70,6 +71,7 @@
             <div class="title">
                 <h1>Nova transação</h1>
             </div>
+
             <div class="inputers">
 
                 <div class="transaction_type">
@@ -148,7 +150,7 @@
                                 +
                             </td>
                             <td>
-                                Lorem ipsum 
+                                Lorem ipsum
                             </td>
                             <td>
                                 R$ 9,99
