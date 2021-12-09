@@ -98,7 +98,7 @@ a {
     justify-content: center;
 }
 
-.content > .form {
+.form {
     width: 400px;
     height: 344px;
 
@@ -111,12 +111,12 @@ a {
 
 
 /* content title */
-.content > .form > .title {
+.form .title {
     text-align: center;
     color: #000000;
 }
 
-.content > .form > .title > h1 {
+.form .title h1 {
 
     font-weight: bold;
     font-size: 18px;
@@ -125,16 +125,16 @@ a {
 
 /* content transaction type */
 
-.content > .form > .inputers > .transaction_type {
+.transaction_type, .merch_name, .merch_value {
     display: grid;
     width: 370px;
 
-    margin: 20px auto 0;
+    margin: 20px 15px 0;
     
 }
 
 
-.content > .form > .inputers > .transaction_type > label {
+.transaction_type label, .merch_name label, .merch_value label{
 
     font-weight: normal;
     font-size: 14px;
@@ -146,9 +146,10 @@ a {
 }
 
 
-.content > .form > .inputers > .transaction_type > select {
+.transaction_type select, .merch_name input, .merch_value input {
 
     padding-left: 10px;
+    margin-top: 4px;
     height: 32px;
 
     background: #FFFFFF;
@@ -166,86 +167,12 @@ a {
 
 }
 
-
-/* content merchandise name */
-
-.content > .form > .inputers > .merch_name {
-    display: grid;
-    width: 370px;
-
-    margin: 21px auto 0;
-
+.merch_name input, .merch_value input {
+    margin-inline-start: auto;
 }
-
-.content > .form > .inputers > .merch_name > label {
-
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-    /* or 157% */
-
-    color: #333333;
-    margin-bottom: 4px;
-}
-
-.content > .form > .inputers > .merch_name > input {
-    height: 32px;
-    padding-left: 10px;
-
-    background: #FFFFFF;
-    border: 1px solid #979797;
-    box-sizing: border-box;
-    border-radius: 4px;
-    
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-
-    color: #888888;
-}
-
-
-/* content merchandise value */
-
-.content > .form > .inputers > .merch_value {
-    display: grid;
-    width: 370px;
-
-    margin: 21px auto 0;
-}
-
-
-.content > .form > .inputers > .merch_value > label {
-
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-    /* or 157% */
-
-    color: #333333;
-    margin-bottom: 4px;
-}
-
-
-.content > .form > .inputers > .merch_value > input {
-    height: 32px;
-    padding-left: 10px;
-
-    background: #FFFFFF;
-    border: 1px solid #979797;
-    box-sizing: border-box;
-    border-radius: 4px;
-        
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-
-    color: #888888;
-}
-
 
 /* content input button {submit_button} */
-.content > .form > .submit_button {
+.submit_button {
     display: grid;
     width: 370px;
     height: 32px;
@@ -274,7 +201,7 @@ a {
 
 /* estilização do content > extract */
 
-.content > .extract {
+.extract {
     width: 680px;
     height: 281px;
 
@@ -284,12 +211,12 @@ a {
     border-radius: 4px;
 }
 
-.content > .extract > .title {
+.extract .title {
     text-align: center;
     color: #000000;
 }
 
-.content > .extract > .title > h1 {
+.extract .title  h1 {
 
     font-weight: bold;
     font-size: 18px;
@@ -299,7 +226,7 @@ a {
 
 /* list */
 
-.content > .extract > section > .list {
+.extract > section > .list {
 
     border-collapse: collapse;
 
@@ -314,7 +241,7 @@ a {
 
 /* list thead */
 
-.content > .extract > section > .list > thead {
+.extract > section > .list > thead {
 
     font-weight: bold;
     font-size: 14px;
@@ -322,22 +249,22 @@ a {
 
 }
 
-.content > .extract > section > .list > thead > tr > th {
+.extract > section > .list > thead > tr > th {
     border-bottom: 1px solid #979797;
 }
 
-.content > .extract > section > .list > thead > tr > th:nth-child(2) {
+.extract > section > .list > thead > tr > th:nth-child(2) {
     text-align: start;
     width: 35%;
 }
 
-.content > .extract > section > .list > thead > tr > th:nth-child(3) {
+.extract > section > .list > thead > tr > th:nth-child(3) {
     text-align: end;
 }
 
 /* list tbody */
 
-.content > .extract > section > .list > tbody { 
+.extract > section > .list > tbody { 
 
     font-weight: normal;
     font-size: 14px;
@@ -345,23 +272,23 @@ a {
 }
 
 
-.content > .extract > section > .list > tbody > tr > td {
+.extract > section > .list > tbody > tr > td {
     border-bottom: 1px solid #979797;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.content > .extract > section > .list > tbody > tr > td:nth-child(1) {
+.extract > section > .list > tbody > tr > td:nth-child(1) {
     text-align: center;
 }
 
-.content > .extract > section > .list > tbody > tr > td:nth-child(3) {
+.extract > section > .list > tbody > tr > td:nth-child(3) {
     text-align: end;
 }
 
 /* results */
 
-.content > .extract > .results {
+.extract > .results {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -377,7 +304,7 @@ a {
 
 }
 
-.content > .extract > .results > .total {
+.extract > .results > .total {
 
     font-weight: bold;
     font-size: 14px;
@@ -385,7 +312,7 @@ a {
 
 }
 
-.content > .extract > .results > .value {
+.extract > .results > .value {
     text-align: end;
 
     font-weight: bold;
@@ -394,7 +321,7 @@ a {
 
 }
 
-.content > .extract > .results > .profits {
+.extract > .results > .profits {
     text-align: end;
     grid-column-start: 2;
 
@@ -405,46 +332,24 @@ a {
 }
 
 @media screen and (max-width: 1112px) {
-    /*header > .headerContent {
-        margin: 0 calc(52% - (1110px/2));
-    }
 
-    .content {
-        margin-left: calc(52% - (1110px/2));
-    }*/
-
-    .content > .extract  {
+    .extract  {
         width: 652px;
     }
 }
 
 
 @media screen and (max-width: 1076px) {
-    /*header > .headerContent {
-        margin: 0 calc(54% - (1110px/2));
-    }
 
-    
-    .content {
-        margin-left: calc(54% - (1110px/2));
-    }*/
-
-    .content > .extract  {
+    .extract  {
         width: 622px;
     }
 }
 
 
 @media screen and (max-width: 1024px) {
-    /*header > .headerContent {
-        margin: 0 calc(56% - (1112px/2));
-    }
-        
-    .content {
-        margin-left: calc(56% - (1110px/2));
-    }*/
 
-    .content > .extract  {
+    .extract  {
         width: 582px;
     }
 }
@@ -458,7 +363,7 @@ a {
         margin:30px 20px;
     }
 
-    .content > .extract  {
+    .extract  {
         width: 582px;
     }
 }
@@ -541,33 +446,33 @@ a {
         flex-direction: column;
     }
 
-    .content > .form {
+    .form {
         width: 728px;
         height: 189px;
     }
 
-    .content > .form > .inputers {
+    .form > .inputers {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
     }
 
-    .content > .form > .inputers > .transaction_type {
+    .form > .inputers > .transaction_type {
         width: 150px;
         margin: 0 0 0;
     }
     
-    .content > .form > .inputers > .merch_name {
+    .form > .inputers > .merch_name {
         width: 348px;
         margin: 0 0 0;
     }
     
-    .content > .form > .inputers > .merch_value {
+    .form > .inputers > .merch_value {
         width: 150px;
         margin: 0 0 0;
     }
 
-    .content > .form > .submit_button {
+    .submit_button {
 
         width: 200px;   
 
@@ -575,7 +480,7 @@ a {
         margin: 20px 5px 0;
     }
     
-    .content > .extract {
+    .extract {
         width: 728px;
         margin-top: 20px;
     }
@@ -592,7 +497,7 @@ a {
         right: 324px;
     }
 
-    .content > .form {
+    .form {
         margin-left: auto;
         margin-right: auto;
 
@@ -606,30 +511,30 @@ a {
     }
 
     
-    .content > .form > .inputers {
+    .form > .inputers {
         display: block;
     }
 
-    .content > .form > .title {
+    .form .title {
         display: none;
     }
 
-    .content > .form > .inputers > .transaction_type {
+    .form > .inputers > .transaction_type {
         width: 371px;
         margin-left: auto;
     }
     
-    .content > .form > .inputers > .merch_name {
+    .form > .inputers > .merch_name {
         width: 371px;
         margin-left: auto;
     }
     
-    .content > .form > .inputers > .merch_value {
+    .form > .inputers > .merch_value {
         width: 371px;
         margin-left: auto;
     }
 
-    .content > .form > .submit_button {
+    .submit_button {
 
         width: 371px;   
 
@@ -637,7 +542,7 @@ a {
         margin: 20px auto 0;
     }
 
-    .content > .extract {
+    .extract {
         width: 371px;
         margin-top: 20px;
     }
