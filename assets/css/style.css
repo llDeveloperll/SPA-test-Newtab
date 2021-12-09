@@ -484,6 +484,10 @@ a {
         right: 324px;
     }
 
+    .content {
+        margin: 0 20px;
+    }
+
     .form {
         margin-left: auto;
         margin-right: auto;
@@ -494,7 +498,7 @@ a {
         border-bottom: 1px solid #979797;
 
         width: 371px;
-        height: 280px;
+        height: 290px;
     }
 
     
@@ -507,8 +511,13 @@ a {
     }
 
     .transaction_type, .merch_name, .merch_value {
+        margin-top: 15px;
         width: 371px;
         margin-left: auto;
+    }
+
+    .transaction_type label, .merch_name label, .merch_value label {
+        margin-bottom: 1px;
     }
 
     .submit_button {
@@ -516,7 +525,7 @@ a {
         width: 371px;   
 
         float: none;
-        margin: 20px auto 0;
+        margin: 15px auto 0;
     }
 
     .extract {
