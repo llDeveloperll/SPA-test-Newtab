@@ -35,7 +35,7 @@ header {
 }
 
 /* aplicação de props {classe headerContent} */
-header > .headerContent {
+.headerContent {
     display: flex; /* demarca que o display será type flex */
     align-items: center; /* centraliza os items verticalmente */
 
@@ -48,7 +48,7 @@ header > .headerContent {
 }
 
 /* estilização {H2 - headerContent} */
-header > .headerContent > .logoTitle > h2 {
+.logoTitle  h2 {
     margin-left: 20px; /* aplica uma margem de 20px a esquerda, separando do logo (svg) */
 
     font-weight: 600;
@@ -110,22 +110,23 @@ a {
 }
 
 
-/* content title */
-.form .title {
+/* Estilização dos titles na div content */
+.title {
     text-align: center;
     color: #000000;
 }
 
-.form .title h1 {
-
+.title h1 {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
 }
 
-/* content transaction type */
 
-.transaction_type, .merch_name, .merch_value {
+
+/* Estilização dos input's na div .form */
+
+.transaction_type, .merch_name, .merch_value { /* aplicado display, tamanho e margens padrões */
     display: grid;
     width: 370px;
 
@@ -133,8 +134,7 @@ a {
     
 }
 
-
-.transaction_type label, .merch_name label, .merch_value label{
+.transaction_type label, .merch_name label, .merch_value label { /* estilização nas fontes dos input's */
 
     font-weight: normal;
     font-size: 14px;
@@ -146,7 +146,7 @@ a {
 }
 
 
-.transaction_type select, .merch_name input, .merch_value input {
+.transaction_type select, .merch_name input, .merch_value input { /* estilização dos input's */
 
     padding-left: 10px;
     margin-top: 4px;
@@ -167,12 +167,13 @@ a {
 
 }
 
+/* quando aplicado margem fixa este dois input's deram bug, essa prop solucionou o problema*/
 .merch_name input, .merch_value input {
     margin-inline-start: auto;
 }
 
-/* content input button {submit_button} */
-.submit_button {
+
+.submit_button { /* estilização do botão para enviar o form */
     display: grid;
     width: 370px;
     height: 32px;
@@ -211,22 +212,10 @@ a {
     border-radius: 4px;
 }
 
-.extract .title {
-    text-align: center;
-    color: #000000;
-}
-
-.extract .title  h1 {
-
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-
-}
 
 /* list */
 
-.extract > section > .list {
+.list {
 
     border-collapse: collapse;
 
@@ -241,7 +230,7 @@ a {
 
 /* list thead */
 
-.extract > section > .list > thead {
+.list thead {
 
     font-weight: bold;
     font-size: 14px;
@@ -249,46 +238,45 @@ a {
 
 }
 
-.extract > section > .list > thead > tr > th {
+.list th {
     border-bottom: 1px solid #979797;
 }
 
-.extract > section > .list > thead > tr > th:nth-child(2) {
+.list th:nth-child(2) {
     text-align: start;
     width: 35%;
 }
 
-.extract > section > .list > thead > tr > th:nth-child(3) {
+.list th:nth-child(3) {
     text-align: end;
 }
 
 /* list tbody */
 
-.extract > section > .list > tbody { 
+.list tbody { 
 
     font-weight: normal;
     font-size: 14px;
 
 }
 
-
-.extract > section > .list > tbody > tr > td {
+.list td {
     border-bottom: 1px solid #979797;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.extract > section > .list > tbody > tr > td:nth-child(1) {
+.list td:nth-child(1) {
     text-align: center;
 }
 
-.extract > section > .list > tbody > tr > td:nth-child(3) {
+.list td:nth-child(3) {
     text-align: end;
 }
 
 /* results */
 
-.extract > .results {
+.results {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -304,7 +292,7 @@ a {
 
 }
 
-.extract > .results > .total {
+.total {
 
     font-weight: bold;
     font-size: 14px;
@@ -312,7 +300,7 @@ a {
 
 }
 
-.extract > .results > .value {
+.value {
     text-align: end;
 
     font-weight: bold;
@@ -321,7 +309,7 @@ a {
 
 }
 
-.extract > .results > .profits {
+.profits {
     text-align: end;
     grid-column-start: 2;
 
@@ -355,7 +343,7 @@ a {
 }
 
 @media screen and (max-width: 1023px) {
-    header > .headerContent {
+    .headerContent {
         margin: 0 20px;
     }
 
@@ -369,30 +357,33 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-
-    header > .headerContent > .logoTitle > h2 {
+    
+    .logoTitle  {
+        margin-left: auto; /* deixa o texto centralizado */
+    }
+    
+    .logoTitle h2 {
         margin-left: 0; /* remove margin de 20 px aplicado pra desktop */
     }
-
-    header > .headerContent  > .logoTitle  {
-        margin-left: auto; /* deixa o texto centralizado */
+    
+    .headerContent {
+        max-width: 728px;
     }
 
     .headerContent nav {
         background-color: transparent;
-        width: 0;
     }
 
-    .navContent {
+    .navContent, .navContent span, .navBarBackground {
         display: none;
     }
-    
-    .navContent span, .navBarBackground {
-        display: none;
-    }
-    
+
     .navBarIcon {
         display: inline-flex;
+    }
+
+    #check:checked ~ .navBarIcon {
+        display: none;
     }
 
     #check:checked ~ .navBarClose {
@@ -407,7 +398,7 @@ a {
     #check:checked ~ .navBarBackground {
         color: transparent;
         display: block;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         height: 100vh;
@@ -418,23 +409,24 @@ a {
     #check:checked ~ .navContent, .navContent a {
         display: grid;
         color: white;
-        position: relative;
-        right: 130px;
-        top: 20px;
+        position: absolute;
+        right: 0px;
         margin-top: 6px;
-        width: 280px;
+        top: 28px;
+        width: 252px;
         height: 32px;
         justify-content: end;
         align-content: center;
     }
 
-    #check:checked ~ .navContent a {
-        padding-right: 8px;
+    #check:checked ~ .navContent a:not(:first-child) {
+        top: 70px;
     }
 
     .navContent a:hover {
         background-color: #C4C4C4;
-        width: 244px;
+        width: 252px;
+        right: 0;
         height: 32px;
         align-content: center;
         place-self: flex-end;
@@ -451,24 +443,19 @@ a {
         height: 189px;
     }
 
-    .form > .inputers {
+    .inputers {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
     }
 
-    .form > .inputers > .transaction_type {
+    .transaction_type, .merch_value {
         width: 150px;
         margin: 0 0 0;
     }
     
-    .form > .inputers > .merch_name {
+    .merch_name {
         width: 348px;
-        margin: 0 0 0;
-    }
-    
-    .form > .inputers > .merch_value {
-        width: 150px;
         margin: 0 0 0;
     }
 
@@ -477,7 +464,7 @@ a {
         width: 200px;   
 
         float: right;
-        margin: 20px 5px 0;
+        margin: 20px 20px 0;
     }
     
     .extract {
@@ -487,7 +474,7 @@ a {
 }
 
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 425px) {
 
     #check:checked ~ .navBarBackground {
         width: 351px;
@@ -507,11 +494,11 @@ a {
         border-bottom: 1px solid #979797;
 
         width: 371px;
-        height: 290px;
+        height: 280px;
     }
 
     
-    .form > .inputers {
+    .inputers {
         display: block;
     }
 
@@ -519,17 +506,7 @@ a {
         display: none;
     }
 
-    .form > .inputers > .transaction_type {
-        width: 371px;
-        margin-left: auto;
-    }
-    
-    .form > .inputers > .merch_name {
-        width: 371px;
-        margin-left: auto;
-    }
-    
-    .form > .inputers > .merch_value {
+    .transaction_type, .merch_name, .merch_value {
         width: 371px;
         margin-left: auto;
     }
