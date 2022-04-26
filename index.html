@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
+    
     <link rel="stylesheet" href="assets/css/style.css">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="module" src="assets/js/form.js" defer></script>
 
     <title>Single Page Application</title>
 </head>
@@ -62,7 +64,7 @@
 
     <div class="content">
 
-        <div class="form">
+        <form id="form" class="form" action="">
 
             <div class="title">
                 <h1>Nova transação</h1>
@@ -72,32 +74,29 @@
 
                 <div class="transaction_type">
                     <label for="transaction_type">Tipo de transação</label>
-                    <select class="input empty" id="transaction_type" name="transaction_type">
-                        <option value="" selected disabled hidden>Selecione</option>
-                        <option value="buy">Compra</option>
+                    <select class="input empty" id="transaction_type" name="Tipo de transação">
+                        <option value="0">Compra</option>
                         <option value="sell">Venda</option>
                     </select>
                 </div>
 
                 <div class="merch_name">
                     <label for="merch_name">Nome da mercadoria</label>
-                    <input class="merch_name" id="merch_name" name="merch_name" type="text"
+                    <input class="merch_name" id="merch_name" name="Nome da mercadoria" type="text"
                         placeholder="Nome da mercadoria">
                 </div>
 
-
                 <div class="merch_value">
                     <label for="merch_value">Valor</label>
-                    <input class="merch_value" id="merch_name" name="merch_name" autocomplete="off" type="numeric"
+                    <input class="merch_value" id="merch_value" name="Valor" autocomplete="off" type="numeric"
                         placeholder="R$ 0,00">
                 </div>
 
             </div>
 
+            <button class="submit_button" type="submit" value="send" >Adicionar transação</button>
 
-            <button class="submit_button" type="submit">Adicionar transação</button>
-
-        </div>
+        </form>
 
         <div class="extract">
 
@@ -174,6 +173,7 @@
 
 
     <footer></footer>
+
 
 </body>
 
