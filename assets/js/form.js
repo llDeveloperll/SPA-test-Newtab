@@ -20,7 +20,7 @@ const validations = [
 
     function(id,value) { // field it's empty.
 
-        if (value == '' || !value) {
+        if (value == '' || !value || !value.replace(/\s/g, '').length) {
             
             return ["valueInvalid", 'Preencha o campo  "' + getName(id) + '".', id]
 
@@ -39,7 +39,6 @@ function incorrectField(element) {
         element.style.borderColor = '#333333'
     }, 2700);
 }
-
 
 getElement('form').onsubmit = function(p) {
     p.preventDefault();
@@ -74,6 +73,7 @@ getElement('form').onsubmit = function(p) {
             return alert(st[1])
 
         } 
+  
 
     }
 
@@ -81,3 +81,17 @@ getElement('form').onsubmit = function(p) {
 
 }
 
+
+function inputHandler(masks, max, event) {
+	var c = event.target;
+	var v = c.value.replace(/\D/g, '');
+	var m = c.value.length > max ? 1 : 0;
+	VMasker(c).unMask();
+	VMasker(c).maskPattern(masks[m]);
+	c.value = VMasker.toPattern(v, masks[m]);
+}
+
+var moneyMask = ['99,99', '99,999,99'];
+var element = getElement('merch_value');
+VMasker(element).maskPattern(moneyMask[0]);
+element.addEventListener('input', inputHandler.bind(undefined, moneyMask, 4), false);
