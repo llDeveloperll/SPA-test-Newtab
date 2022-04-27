@@ -1,20 +1,15 @@
-function getElement(id) {
-    return document.getElementById(id)
-}
- 
-function getValues(id){
-    if (getElement(id)) {
-        return getElement(id).value
-    }
-    return false
-}
+import {getElement,getValues,getName} from "./utils.js";
+import {incorrectField} from "./animations.js";
 
-function getName(id) {
-    if (getElement(id)) {
-        return getElement(id).getAttribute('name')
-    }
-}
+var key = 'datas'
 
+if (localStorage.getItem(key)) 
+    var datas = [localStorage.getItem(key)]
+else 
+    var datas = []
+
+
+console.log(datas)
 
 const validations = [
 
@@ -32,13 +27,6 @@ const validations = [
     },
 
 ]
-
-function incorrectField(element) {
-    element.style.borderColor = 'red'
-    setTimeout(() => {
-        element.style.borderColor = '#333333'
-    }, 2700);
-}
 
 getElement('form').onsubmit = function(p) {
     p.preventDefault();
@@ -65,8 +53,6 @@ getElement('form').onsubmit = function(p) {
         let element = getElement(st[2]);
 
         if (st[0] == "valueInvalid") {
-            //element.style.borderColor = 'red'
-            //element.autofocus
 
             incorrectField(element)
             
@@ -77,7 +63,7 @@ getElement('form').onsubmit = function(p) {
 
     }
 
-    console.log(statement)
+    localStorage.setItem(key,JSON.stringify([]))
 
 }
 
